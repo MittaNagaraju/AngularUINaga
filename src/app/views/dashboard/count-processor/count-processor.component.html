@@ -1,0 +1,100 @@
+<div style="width: 100%;text-align: right;margin-top: -12px;">
+  <!-- <button style="text-align: right;" mat-raised-button color="accent" (click)="getUploadfailed()">Upload failed coil
+    image</button> -->
+    <button mat-mini-fab color="accent" [disabled]="false"
+          (click)="getUploadfailed()">
+          <mat-icon matTooltip="Upload failed coil image">camera_alt</mat-icon>
+        </button>
+</div>
+<div style="width: 100%;">
+  <div class="year-info-wrap" [@animate]="{value:'*',params:{y:'25px',delay:'300ms'}}">
+
+    <div class="yearly-info">
+
+      <mat-card fxLayout="row wrap" class="default">
+        <div class="p-1" fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="text-center">
+          <div class="p-1">
+            <div
+              class="rounded-circle w-12 h-12 flex items-center justify-center text-primary red-100 m-auto flex justify-center align-center">
+              <mat-icon svgIcon="assessment" class="btn-icon" color="primary"></mat-icon>
+            </div>
+            <h1 class="fw-600 mt-4 mb-2 mt-1 m-auto text-30 text-title">{{noofcoil?.autobrazer || "0"}}</h1>
+            <h4 class="fw-500 mt-4 mb-2 mt-1 text-primary text-15">Autobrazer</h4>
+          </div>
+        </div>
+
+      </mat-card>
+    </div>
+    <div class="yearly-info">
+
+      <mat-card fxLayout="row wrap" class="default">
+        <div class="p-1" fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="text-center">
+          <div class="p-1">
+            <div
+              class="rounded-circle w-12 h-12 flex items-center justify-center text-primary red-100 m-auto flex justify-center align-center">
+              <mat-icon svgIcon="assessment" class="btn-icon" color="primary"></mat-icon>
+            </div>
+            <h1 class="fw-600 mt-4 mb-2 mt-1 m-auto text-30 text-title">{{noofcoil?.coil_build_station || "0"}}</h1>
+            <h4 class="fw-500 mt-4 mb-2 mt-1 text-primary text-15">Coil build station</h4>
+          </div>
+        </div>
+
+      </mat-card>
+    </div>
+
+    <div class="yearly-info">
+
+      <mat-card fxLayout="row wrap" class="default">
+        <div class="p-1" fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="text-center">
+          <div class="p-1">
+            <div
+              class="rounded-circle w-12 h-12 flex items-center justify-center text-primary red-100 m-auto flex justify-center align-center">
+              <mat-icon svgIcon="assessment" class="btn-icon" color="primary"></mat-icon>
+            </div>
+            <h1 class="fw-600 mt-4 mb-2 mt-1 m-auto text-30 text-title">{{noofcoil?.manifold_or_adding_fittings || "0"}}
+            </h1>
+            <h4 class="fw-500 mt-4 mb-2 mt-1 text-primary text-15">Manifold Install/Adding Fittings</h4>
+          </div>
+        </div>
+
+      </mat-card>
+    </div>
+
+
+  </div>
+
+  <div class="year-info-wrap" [@animate]="{value:'*',params:{y:'25px',delay:'300ms'}}">
+
+    <div class="yearly-info cur-poi" style="margin-left: 33.3%;" (click)="clickNavigation()">
+
+      <mat-card fxLayout="row wrap" class="default">
+        <div class="p-1" fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="text-center">
+          <div class="p-1">
+            <div
+              class="rounded-circle w-12 h-12 flex items-center justify-center text-primary red-100 m-auto flex justify-center align-center">
+              <mat-icon svgIcon="assessment" class="btn-icon" color="primary"></mat-icon>
+            </div>
+            <h1 class="fw-600 mt-4 mb-2 mt-1 m-auto text-30 text-title">{{noofcoil?.leak_test || "0"}}
+            </h1>
+            <h4 class="fw-500 mt-4 mb-2 mt-1 text-primary text-15">Failed Leak Test</h4>
+
+            <div fxLayout="row wrap">
+              <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="50"
+                style="border-right: 1px solid #b0b0b0;border-top: 1px solid #b0b0b0;">
+                <h1 class="fw-600 mt-4 mb-2 mt-1 m-auto text-18 text-title">{{noofcoil?.water_leak_test || "0"}}
+                </h1>
+                <h4 class="fw-500 mt-4 mb-2 mt-1 text-primary text-13">Water leak test</h4>
+              </div>
+
+              <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="50" style="border-top: 1px solid #b0b0b0;">
+                <h1 class="fw-600 mt-4 mb-2 mt-1 m-auto text-18 text-title">{{noofcoil?.helium_leak_test || "0"}}
+                </h1>
+                <h4 class="fw-500 mt-4 mb-2 mt-1 text-primary text-13">Helium leak test</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

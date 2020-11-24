@@ -1,0 +1,20 @@
+.txt-align{
+    text-align: right;
+}
+
+.selected-image {
+    border: 1px solid red;
+}
+
+.p-para{
+    margin: 0 0 10px !important;
+}
+
+.mt-card {
+    margin-top: 7px;
+}
+
+img:not(.mat-card-image) {
+    max-width: 100%;
+    height: 150px;
+}

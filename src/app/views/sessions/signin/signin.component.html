@@ -1,0 +1,58 @@
+<div class="page-wrap page-login height-100 black">
+  <div class="signIn-wrapper">
+    <mat-progress-bar mode="determinate" class="session-progress"></mat-progress-bar>
+    <mat-card>
+      <div class="card-body-content">
+        <div class="text-center pt-8 pb-16">
+          <img width="170px" src="assets/images/logo_lennox.gif" alt="">
+          <h5 class="fw-500">Login</h5>
+          <!-- <p class="text-muted m-0">Sign In</p> -->
+        </div>
+
+        <p class="text-center"><small class="text-red">{{errorMessage}}</small></p>
+
+        <form (submit)="loginSubmit($event,f)" #f="ngForm" novalidate>
+          <div class="">
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Username" autocomplete="off" name="userName" [(ngModel)]="data.userName"
+                [required]="true" #userName="ngModel">
+              <mat-error *ngIf="(userName.errors && userName.touched || f.submitted)">
+                <small *ngIf="userName.errors?.required" class="haserror">
+                  User name is required
+                </small>
+              </mat-error>
+            </mat-form-field>
+
+          </div>
+
+          <div class="">
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="password" type="password" name="password" autocomplete="off"
+                [(ngModel)]="data.password" name="password" [required]="true" #password="ngModel">
+              <mat-error *ngIf="(password.errors && password.touched || f.submitted)">
+                <small *ngIf="password.errors?.required" class="haserror">
+                  Password is required
+                </small>
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="pb-1" fxLayout="row" fxLayoutAlign="space-between center">
+            <mat-checkbox [(ngModel)]="data.remember" name="remember">
+              Remember me
+            </mat-checkbox>
+
+          </div>
+          <div style="width: 100%;">
+            <button mat-raised-button style="float: right;margin-right: 25px;" color="primary" class="mb-1 cur-poi"
+              type="submit" [disabled]="onSubmitLoading">Login
+              <mat-spinner [diameter]="24" *ngIf="onSubmitLoading"
+                style="position:absolute;right:-24px;top:0;margin: 5px 0px 0px 5px"></mat-spinner></button>
+          </div>
+        </form>
+      </div>
+    </mat-card>
+  </div>
+</div>

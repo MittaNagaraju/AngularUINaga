@@ -1,0 +1,40 @@
+.mat-drawer-container {
+  // background: transparent !important;
+}
+.vert-icon {
+  position: absolute;
+  right: 10px;
+}
+.ngx-pagination {
+
+  text-align: center;
+  .current {
+    background: #0184b8 !important;
+  }
+  
+}
+.customer-info {
+  .apexcharts-xaxis {
+    display: none;
+  }
+  .apexcharts-yaxis {
+    display: none;
+  }
+}
+
+.text-primary {
+  color: #666666;
+}
+
+.text-secondary {
+  color: #b0b0b0;
+}
+
+.text-title {
+  color: #8b0013;
+}
+
+.cur-poi{
+  cursor: pointer;
+}
+

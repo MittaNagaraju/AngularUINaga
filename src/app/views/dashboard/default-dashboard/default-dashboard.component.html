@@ -1,0 +1,58 @@
+<!-- Fullwidth chart -->
+<!-- <div class="year-info-wrap">
+  <div fxLayout="column" fxLayoutGap="32px" class="yearly-info">
+    <mat-card class="default" fxFlex="312px" *ngFor="let list of plantlists"
+      [routerLink]="'/dashboard/count-processor/'+list.plant">
+      <div class="p-1" fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="text-center">
+        <div class="p-1">
+          <div
+            class="rounded-circle w-12 h-12 flex items-center justify-center text-primary red-100 m-auto flex justify-center align-center">
+            <mat-icon svgIcon="insert_photo" class="btn-icon" color="primary"></mat-icon>
+          </div>
+          <h1 class="fw-500 mt-4 mb-2 mt-1 text-primary text-25">{{list.plant}}</h1>
+         
+        </div>
+      </div>
+
+    </mat-card>
+  </div>
+</div> -->
+
+
+<!-- <div class="cardList">
+  <ng-container *ngFor="let list of plantlists">
+    <mat-card class="cardListItem">
+      <div class="p-1" class="text-center">
+        <div class="p-1">
+          <div
+            class="rounded-circle w-12 h-12 flex items-center justify-center text-primary red-100 m-auto flex justify-center align-center">
+            <mat-icon svgIcon="insert_photo" class="btn-icon" color="primary"></mat-icon>
+          </div>
+          <h1 class="fw-500 mt-4 mb-2 mt-1 text-primary text-25">{{list.plant}}</h1>
+         
+        </div>
+      </div>
+    </mat-card>
+  </ng-container>
+</div> -->
+
+<div class="year-info-wrap" [@animate]="{value:'*',params:{y:'25px',delay:'300ms'}}">
+
+  <div fxLayout="row wrap" fxLayoutGap="11px" fxLayoutAlign="flex-start" style=" width: 100%;">
+    <ng-container *ngFor="let list of plantlists">
+      <mat-card class="default" fxFlex="0 1 calc(33.3% - 20px)" fxFlex.lt-md="0 1 calc(50% - 20px)" fxFlex.lt-sm="100%">
+        <div class="p-1" class="text-center cur-poi" (click)="nextNavigateUrl(list)">
+          <div class="p-1">
+            <div
+              class="rounded-circle w-12 h-12 flex items-center justify-center text-primary red-100 m-auto flex justify-center align-center">
+              <mat-icon svgIcon="insert_photo" class="btn-icon" color="primary"></mat-icon>
+            </div>
+            <h1 class="fw-500 mt-4 mb-2 mt-1 text-primary text-19">{{list.plant}}</h1>
+          </div>
+        </div>
+
+      </mat-card>
+    </ng-container>
+  </div>
+
+</div>

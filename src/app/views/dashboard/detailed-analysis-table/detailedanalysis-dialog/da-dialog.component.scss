@@ -1,0 +1,33 @@
+.report_title{
+    font-size: 16px;
+    padding: 3px;
+    margin: unset;
+    text-align: center;
+}
+
+/* .mat-dialog {
+    width: 100%;
+    display: inherit;
+    overflow: auto;
+} */
+
+.close_btn {
+    float: right;
+    margin-top: -15px;
+    margin-right: -13px;
+    background: inherit;
+    cursor: pointer;
+}
+
+/* ::ng-deep .cdk-overlay-pane{
+    max-width: 90vw;
+}
+
+::ng-deep .mat-dialog-container{
+margin: 10px;
+} */
+
+/* .mat-dialog-container {
+    max-width: none !important;
+} */
+

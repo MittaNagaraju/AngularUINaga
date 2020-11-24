@@ -1,0 +1,65 @@
+<div mat-dialog-title>
+  <!-- <p fxFlex="70">
+    <span class="report_title">{{data.title}}</span>
+  </p>
+  <p fxFlex="30">
+    <mat-icon class="close_btn" matTooltip="close" (click)="dialogClose()">highlight_off</mat-icon>
+  </p> -->
+  <div class="column wrap">
+    <div class="row wrap" fxFlex="100">
+
+      <p class="report_title">{{data.title}} <mat-icon class="close_btn" matTooltip="close" (click)="dialogClose()">
+          highlight_off</mat-icon>
+      </p>
+
+    </div>
+
+  </div>
+  <div mat-dialog-content>
+    <div class="row wrap" fxFlex="100" style="border: 1px solid #b0b0b0">
+
+      <div class="help-categories" style="padding: 10px;" fxLayout="row wrap">
+        <!-- Fullwidth chart -->
+
+        <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="text-primary">
+          <div fxLayout="row wrap" fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="50">
+            <p fxFlex.gt-sm="40" fxFlex.sm="40" class="fw-600 text-13 p-para">Plant Name : </p>
+            <p fxFlex.gt-sm="60" fxFlex.sm="60" class="fw-500 text-13 p-para">{{data.row.plant_name || '-'}}
+            </p>
+          </div>
+          <div fxLayout="row wrap" fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="50">
+            <p fxFlex.gt-sm="40" fxFlex.sm="40" class="fw-600 text-13 p-para">Date : </p>
+            <p fxFlex.gt-sm="60" fxFlex.sm="60" class="fw-500 text-13 p-para">{{data.row.date || '-'}} 02:08:22 </p>
+          </div>
+
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="text-primary">
+          <div fxLayout="row wrap" fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="50">
+            <p fxFlex.gt-sm="40" fxFlex.sm="40" class="fw-600 text-13 p-para">Line : </p>
+            <p fxFlex.gt-sm="60" fxFlex.sm="60" class="fw-500 text-13 p-para">{{data.row.line || '-'}}</p>
+          </div>
+          <div fxLayout="row wrap" fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="50">
+            <p fxFlex.gt-sm="40" fxFlex.sm="40" class="fw-600 text-13 p-para">Workstation : </p>
+            <p fxFlex.gt-sm="60" fxFlex.sm="60" class="fw-500 text-13 p-para">{{data.row.station || '-'}} </p>
+          </div>
+
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="100" class="text-primary">
+          <div fxLayout="row wrap" fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="50">
+            <p fxFlex.gt-sm="40" fxFlex.sm="40" class="fw-600 text-13 p-para">Person Responsible : </p>
+            <p fxFlex.gt-sm="60" fxFlex.sm="60" class="fw-500 text-13 p-para">
+              {{data.row.worker_at_line || '-'}}</p>
+          </div>
+          <div fxLayout="row wrap" fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="50">
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayoutAlign="space-between none" fxLayoutGap="15px">
+    <img src="{{data.img_url}}" style="width: 100%;overflow: auto;" />
+  </div>
+
+</div>
