@@ -25,4 +25,4 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
-    publishLocation: 'Dist'
+    publishLocation: 'Dist' 
