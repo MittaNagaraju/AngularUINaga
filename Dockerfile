@@ -1,5 +1,5 @@
 # Stage 1
-FROM node:12.20.0-alpine as node
+FROM ubuntu:latest
 LABEL author="Nagaraju Mitta"
 WORKDIR /app
 COPY package.json ./
