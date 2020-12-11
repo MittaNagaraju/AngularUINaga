@@ -1,5 +1,5 @@
 # Stage 1
-FROM node:10.23.0-alpine3.11 as node
+FROM node:10 as node
 LABEL author="Nagaraju Mitta"
 WORKDIR /app
 COPY package.json ./
